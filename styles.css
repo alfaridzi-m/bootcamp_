@@ -183,3 +183,75 @@ li a,img{
 .navbar li img:hover {
     background-color: #111;
 }
+
+.slider-btn {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .slider-btn.left {
+    left: -20px;
+  }
+  
+  .slider-btn.right {
+    right: -20px;
+  }
+
+
+.film-section {
+    color: white;
+    padding: 20px;
+    background-color: #1c1c1c;
+    overflow-x: hidden;
+  }
+  
+  .film-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .film-slider-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .film-slider {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+  
+  .film-card {
+    min-width: 200px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2c2c2c;
+    position: relative;
+  }
+  
+  .film-card img {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .film-info {
+    padding: 8px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
