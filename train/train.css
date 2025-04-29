@@ -104,7 +104,6 @@ li a{
 }
 .teks-btn {
     position: absolute;
-    width: 100%;
     bottom: 0;
     z-index: 2;
     display: flex;
@@ -147,7 +146,6 @@ li a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
     height: 50px;
     background-color: #22252b;
     border-radius: 25px;
@@ -227,13 +225,21 @@ li a{
     height: 400px;
     color: #ffffff;
 }
+.film-section h2 {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
 .film-slider-wrapper {
     position: relative;
-    width: 100%;
-    overflow: hidden;
+    height: 300px;
+    width: 65%;
+    overflow: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
 }
 
 .film-slider {
@@ -241,14 +247,19 @@ li a{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    white-space: nowrap;
     transition: transform 0.3s ease;
     width: calc(25% * 5);
     height: 100%;
     gap: 20px;
-    flex-wrap: nowrap;
 }
-
+.film-card {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
