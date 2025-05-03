@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar</title>
+    <link rel="icon" href="../icon/cliper.png" type="image/x-icon">
+    <link rel="stylesheet" href="login-page.css">
+</head>
+<body>
+    <main class="container">
+        <img src="../icon/Logo.png" alt="Logo" class="icon">
+        <div class="item-title">
+            <h3>Daftar</h3>
+            <p>Selamat datang!</p>
+        </div> 
+        <div class="item-login">
+            <form action="/login" method="post">
+                <div class="item-username">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Masukan username" name="username" required>
+                </div>
+                <div class="item-password">
+                    <label for="password">Kata Sandi</label>
+                    <input type="password" placeholder="Masukan kata sandi" name="password" required>
+                    <span class="password-toggle"><img src="../icon/eye.png" alt="eye"></span>
+                </div>
+                <div class="item-password">
+                    <label for="password">Konfirmasi Kata Sandi</label>
+                    <input type="password" placeholder="Masukan kata sandi" name="password" required>
+                    <span class="password-toggle"><img src="../icon/eye.png" alt="eye"></span>
+                </div>
+            </form>
+        </div>
+        <div class="item-lainnya">
+            <p class="register">Sudah punya akun? <a href="#">Masuk</a></p>
+        </div>  
+        <button class="button-masuk" type="submit">Masuk</button>
+        <p class="or-text">Atau</p>
+        <div class="google-login">
+            <img src="../icon/goggle.webp" alt="Google Logo" class="google-icon">
+            <a href="#" class="google-login-link">Masuk dengan Google</a>
+        </div>
+    </main>
+</body>
+</html>
