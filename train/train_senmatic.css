@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 1440px;
 }
 
 .navbar {
@@ -28,6 +27,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    
 
 }
 
@@ -37,6 +37,7 @@ body {
     align-items: center;
     margin-left: 5vw;
     gap: 1.5vw;
+    flex-wrap: wrap;
 }
 
 li a{
@@ -75,8 +76,38 @@ li a{
     margin-left: 1.2rem;
     width: 2rem;
     height: 2rem;
+    cursor: pointer;
 }
-
+.akun-drop-menu {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid #1a1a1a;
+    right: 0;
+}
+.dropdown-menu a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-menu a:hover {
+    color: #3254FF;
+}
+.akun-drop-menu:hover .dropdown-menu {
+    display: block;
+}
+.akun-drop-menu:hover .dropicon {
+    background-color: #00000050;
+}
 .main-container {
     display: flex;
     flex-direction: column;
@@ -84,7 +115,7 @@ li a{
     justify-content: center;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     margin-top: 94px;
 }
 
@@ -125,6 +156,7 @@ li a{
     font-weight: 500;
     text-align: left;
     line-height: 1.5;
+    max-width: 1000px;
 }
 .btn {
     position: relative;
@@ -173,6 +205,13 @@ li a{
     margin: 0;
     color: #ffffff;
 }
+.btn img {
+    width: 3rem;
+    height: 3rem;
+
+
+
+}
 
 .boxxx {
     min-height: 25rem;
@@ -207,8 +246,6 @@ li a{
 
 .container-film {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 1.5rem;
     width: 90vw;
     overflow: auto;
@@ -229,6 +266,26 @@ li a{
 
 .box-film {
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.box-film img {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.box-item-text {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer-container {
@@ -242,7 +299,7 @@ li a{
     border-top: 0.125rem solid #1a1a1a;
     justify-content: space-around;
     padding: 3.75rem 0 3.75rem 5vw;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
 }
 .footer-logo{
@@ -292,4 +349,21 @@ li a{
 }
 .h2-footer h2{
     margin-bottom: 0.9rem;
+}
+
+@media screen and (max-width: 780px)  {
+    .overlay-teks {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .footer-container {
+        flex-wrap: wrap;
+    }
+    .item-footer {
+        display: none;
+    }
+    .top-section {
+        height: 50vh;
+    }
 }
