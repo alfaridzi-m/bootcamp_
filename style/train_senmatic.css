@@ -13,7 +13,6 @@ body {
 }
 
 .navbar {
-    height: 94px;
     width: 100vw;
     background-color: #000000;
     display: flex;
@@ -139,7 +138,7 @@ li a{
         
 }
 .hot-teks {
-    width: 60%;
+    width: 100%;
     color: white;
     margin-left: 5vw;
     margin-bottom: 5vw;
@@ -205,12 +204,11 @@ li a{
     margin: 0;
     color: #ffffff;
 }
-.btn img {
-    width: 3rem;
-    height: 3rem;
 
-
-
+.btn i{
+    position: absolute;
+    right: 10%;
+    font-size: 1.25rem;
 }
 
 .boxxx {
@@ -250,11 +248,47 @@ li a{
     gap: 1.5rem;
     width: 90vw;
     overflow: auto;
+    position: relative;
+    z-index: 3;
 }
 .container-film::-webkit-scrollbar {
     display: none;
 }
+.container-teks-film {
+    position: relative;
+}
+.arrow-container-continue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    bottom: 30%;
+}
+.arrow-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    bottom: 40%; 
+}
+.arrow-left,
+.arrow-right {
+    transform: translateY(-50%);
+    position: absolute;
+    pointer-events: auto; /* allow clicking */
+}
 
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
 .film-base {
     display: flex;
     align-items: center;
@@ -288,12 +322,12 @@ li a{
     justify-content: space-around;
 }
 .judul-film {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     margin: 0;
 }
 .ratting{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
     margin: 0;
 }
@@ -303,6 +337,49 @@ li a{
     align-items: center;
     gap: 0.3125rem;
 }
+
+.badge-film-trending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1.9rem;
+    height: 2.4rem;
+    border-radius: 0 0.25rem 0 0.25rem;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    z-index: 2;
+    background-color: #B71F1D;
+    
+}
+.badge-film-trending p {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.badge-film-new {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    background-color: #0F1E93;
+    width: 6.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.875rem;
+
+}
+.badge-film-new p {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+/* bagian footer */
+
 .footer-container {
     background-color: #000000;
     color: #ffffff;
@@ -394,4 +471,14 @@ li a{
     .item-footer-bantuan {
         width: 37.5rem;
     }
+    .btn i{
+        position: static;
+
+    }
+}
+
+@media screen and (max-width: 420px)  {
+}
+.btn {
+    flex-wrap: wrap;
 }
