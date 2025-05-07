@@ -138,7 +138,7 @@ li a{
         
 }
 .hot-teks {
-    width: 100%;
+    width: 90vw;
     color: white;
     margin-left: 5vw;
     margin-bottom: 5vw;
@@ -207,7 +207,7 @@ li a{
 
 .btn i{
     position: absolute;
-    right: 10%;
+    right: 0;
     font-size: 1.25rem;
 }
 
